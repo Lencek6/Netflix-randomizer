@@ -64,9 +64,4 @@
         color: white;
         margin-left: 15px;
     }
-
-    .vertical-align {
-        margin-top: 50%
-    }
-
 </style>

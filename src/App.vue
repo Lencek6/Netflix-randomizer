@@ -1,14 +1,20 @@
 <template>
+  <div>
+  <div class="ml-5 mt-1">
+  <Navigation></Navigation>
+  </div>
   <div class="v-align">
     <router-view></router-view>
+  </div>
   </div>
 </template>
 
 <script>
-
+import Navigation from "@/components/Navigation";
 export default {
   name: 'app',
   components: {
+    Navigation
   }
 }
 </script>

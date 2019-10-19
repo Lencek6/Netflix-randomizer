@@ -1,11 +1,12 @@
 import Login from "@/components/Login";
 import Randomizer from "@/components/Randomizer";
 import Register from "@/components/Register";
+import History from "@/components/History";
 
 const routes = [
   {
-    path: "/",
-    component: Randomizer,
+    path: "/history",
+    component: History,
     meta: {requiresAuth: true}
   },
   {
@@ -16,6 +17,11 @@ const routes = [
   {
     path: "register",
     component: Register,
+    meta: { guest: true}
+  },
+  {
+    path: "/randomizer",
+    component: Randomizer,
     meta: { guest: true}
   }
 ]

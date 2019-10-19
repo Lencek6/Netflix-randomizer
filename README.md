@@ -1,4 +1,4 @@
-# app
+# Netflix randomizer
 
 ## Project setup
 ```
