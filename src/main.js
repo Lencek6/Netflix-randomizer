@@ -5,9 +5,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import router from "../router/index"
 import Unicon from 'vue-unicons'
-import {uniAt, uniKeySkeleton, uniSortAmountDown } from 'vue-unicons/src/icons'
+import {uniAt, uniKeySkeleton, uniSortAmountDown, uniUser } from 'vue-unicons/src/icons'
 
-Unicon.add([uniAt,uniKeySkeleton, uniSortAmountDown])
+Unicon.add([uniAt,uniKeySkeleton, uniSortAmountDown, uniUser])
 Vue.use(Unicon)
 
 Vue.use(BootstrapVue)

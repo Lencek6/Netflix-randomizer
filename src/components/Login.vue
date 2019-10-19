@@ -26,8 +26,9 @@
                         </b-input-group-prepend>
                         <b-form-input
                                 id="input-2"
-                                v-model="form.name"
+                                v-model="form.pwd"
                                 required
+                                type="password"
                                 placeholder="Enter password"
                         ></b-form-input>
                     </b-input-group>
@@ -45,7 +46,7 @@
             return {
                 form: {
                     email: '',
-                    name: '',
+                    pwd: '',
                 },
                 show: true
             }
