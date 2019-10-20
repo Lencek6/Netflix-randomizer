@@ -65,8 +65,9 @@
                                 placeholder="Repeat password"
                         ></b-form-input>
                     </b-input-group>
-                    <b-button class="mt-3" type="submit" variant="danger">Register</b-button>
+                    <b-button class="mt-3 nf-red" type="submit" variant="danger">Register</b-button>
                 </b-form>
+                <router-link to="/" style="color: white">Home</router-link>
             </b-col>
         </b-row>
     </b-container>
@@ -99,5 +100,8 @@
         background: rgba(0, 0, 0, 0.28);
         color: white;
         margin-left: 15px;
+    }
+    .nf-red{
+        background: rgba(255,0,3,0.83);
     }
 </style>

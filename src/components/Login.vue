@@ -32,7 +32,7 @@
                                 placeholder="Enter password"
                         ></b-form-input>
                     </b-input-group>
-                    <b-button class="mt-3" type="submit" variant="danger">Let's roll</b-button>
+                    <b-button class="mt-3 nf-red" type="submit" variant="danger">Login</b-button>
                 </b-form>
                 <router-link to="/register" style="color: white">Not registered yet?</router-link>
             </b-col>

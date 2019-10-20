@@ -5,6 +5,11 @@ import History from "@/components/History";
 
 const routes = [
   {
+    path: "/",
+    component: History,
+    meta: {requiresAuth: true}
+  },
+  {
     path: "/history",
     component: History,
     meta: {requiresAuth: true}

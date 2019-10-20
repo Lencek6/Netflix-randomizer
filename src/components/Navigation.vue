@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- Single button triggers two "<b-collapse>" components -->
-        <b-button variant="danger" v-b-toggle.collapse-a.collapse-b><unicon name="sort-amount-down" fill="black"></unicon></b-button>
+        <b-button class="nf-red" variant="danger" v-b-toggle.collapse-a.collapse-b><unicon name="sort-amount-down" fill="black"></unicon></b-button>
         <div id="inline">
         <!-- Elements to collapse -->
         <b-collapse id="collapse-a" class="ml-5">
