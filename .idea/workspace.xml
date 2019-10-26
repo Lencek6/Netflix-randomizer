@@ -3,21 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b45142b9-4d6e-4d82-afa5-93f9a1f6d41d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/model_movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/model_movie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/model_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/model_user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/movies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/History.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/History.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Randomizer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Randomizer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/History/MovieCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/History/MovieCard.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +82,7 @@
       <workItem from="1571473011621" duration="14396000" />
       <workItem from="1571559058175" duration="10724000" />
       <workItem from="1571571556884" duration="6425000" />
-      <workItem from="1572072429428" duration="15583000" />
+      <workItem from="1572072429428" duration="17681000" />
     </task>
     <servers />
   </component>

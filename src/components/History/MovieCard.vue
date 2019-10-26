@@ -1,7 +1,7 @@
 <template>
     <b-container class="movie-card mb-3">
         <b-row align-v="center">
-            <b-col class="col-md-1 col-sm-1 col-lg-1">
+            <b-col class="col-2 col-sm-1 col-md-1 col-lg-1">
                 <b-button
                         class="btn-collapse"
                         :class="showCollapse ? 'collapsed' : null"
@@ -12,32 +12,29 @@
                     <unicon :name="dropDownIcon" fill="red"></unicon>
                 </b-button>
             </b-col>
-            <b-col class="col-md-1 col-sm-1 col-lg-1">
-                <slot name="id">
-                </slot>
-            </b-col>
-            <b-col class="col-md-10 col-sm-6 col-lg-6">
+            <b-col class="col-7 col-sm-10 col-md-10 col-lg-10">
                 <slot name="title">
                 </slot>
             </b-col>
-            <b-col class="col-md-3 col-sm-3 col-lg-3">
-                <slot name="date">
-                </slot>
-            </b-col>
-            <b-col class="col-md-1 col-sm-1 col-lg-1">
+            <b-col class="col-3 col-sm-1 col-md-1 col-lg-1">
                 <b-button class="btn-delete">
                     <unicon name="trash" fill="red"></unicon>
                 </b-button>
             </b-col>
         </b-row>
         <b-collapse id="collapse" v-model="showCollapse">
-            <b-row class="mt-2">
+            <b-row class="mt-2 ml-2 mr-2">
+                <b-col>
+                    Watch date: <slot name="date"></slot>
+                </b-col>
+            </b-row>
+                <b-row class="ml-2 mr-2">
                 <b-col class="col-md-12">
                     <slot name="image">
                     </slot>
                 </b-col>
             </b-row>
-            <b-row>
+            <b-row class="ml-2 mr-2">
                 <b-col class="col-md-12">
                     <slot name="desc">
                     </slot>

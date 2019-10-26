@@ -1,7 +1,6 @@
 <template>
     <div class="mt-5">
     <MovieCard v-for="movie in movies" :key="movie.id">
-        <span slot="id">{{movie.id}}</span>
         <span slot="title">{{movie.title}} ({{movie.released}})</span>
         <span slot="date">{{parseDate(movie.createdAt)}}</span>
         <img slot="image" :src="movie.image" height="91" width="162"/>
