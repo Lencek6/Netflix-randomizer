@@ -5,7 +5,7 @@ const User = sequelize.define('user', {
     // attributes
     email: {
         type: Sequelize.STRING(20),
-        allowNull: false
+        allowNull: true
     },
     name: {
         type: Sequelize.STRING(10),
@@ -13,7 +13,7 @@ const User = sequelize.define('user', {
     },
     pwd: {
         type: Sequelize.STRING(200),
-        allowNull: false
+        allowNull: true
     }
 }, {
     // options

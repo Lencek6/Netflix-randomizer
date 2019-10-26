@@ -3,7 +3,7 @@
   <div class="ml-5 mt-1">
   <Navigation></Navigation>
   </div>
-  <div class="v-align">
+  <div>
     <router-view></router-view>
   </div>
   </div>

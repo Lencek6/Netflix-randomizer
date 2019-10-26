@@ -12,7 +12,7 @@ const routes = [
   {
     path: "/history",
     component: History,
-    meta: {requiresAuth: true}
+    meta: {requiresAuth: false}
   },
   {
     path: "/login",

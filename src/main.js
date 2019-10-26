@@ -5,9 +5,13 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import router from "../router/index"
 import Unicon from 'vue-unicons'
-import {uniAt, uniKeySkeleton, uniSortAmountDown, uniUser } from 'vue-unicons/src/icons'
+import {uniAt, uniKeySkeleton, uniSortAmountDown, uniUser, uniAngleUp, uniAngleDown, uniTrash} from 'vue-unicons/src/icons'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
-Unicon.add([uniAt,uniKeySkeleton, uniSortAmountDown, uniUser])
+Vue.use(VueAxios, axios)
+
+Unicon.add([uniAt,uniKeySkeleton, uniSortAmountDown, uniUser, uniAngleUp, uniAngleDown, uniTrash])
 Vue.use(Unicon)
 
 Vue.use(BootstrapVue)
