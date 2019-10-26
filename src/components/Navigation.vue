@@ -3,7 +3,7 @@
         <b-row align-v="center">
             <b-col class="col-2 col-md-2 col-lg-2 col-xl-2 mr-4">
                 <b-button class="btn-navi" variant="danger" v-b-toggle.collapse-navi>
-                    <unicon name="sort-amount-down" fill="black"></unicon>
+                    <unicon name="list-ul" fill="black"></unicon>
                 </b-button>
             </b-col>
             <b-col class="col-4 col-md-4 col-lg-4 col-xl-4">

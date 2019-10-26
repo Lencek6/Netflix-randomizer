@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b45142b9-4d6e-4d82-afa5-93f9a1f6d41d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -82,7 +82,7 @@
       <workItem from="1571473011621" duration="14396000" />
       <workItem from="1571559058175" duration="10724000" />
       <workItem from="1571571556884" duration="6425000" />
-      <workItem from="1572072429428" duration="19177000" />
+      <workItem from="1572072429428" duration="19716000" />
     </task>
     <servers />
   </component>
