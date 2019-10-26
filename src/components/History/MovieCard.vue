@@ -9,7 +9,7 @@
                         aria-controls="collapse"
                         @click="triggerCollapse()"
                 >
-                    <unicon :name="dropDownIcon" fill="red"></unicon>
+                    <unicon :name="dropDownIcon" fill="#e50913"></unicon>
                 </b-button>
             </b-col>
             <b-col class="col-7 col-sm-10 col-md-10 col-lg-10">
@@ -18,7 +18,7 @@
             </b-col>
             <b-col class="col-3 col-sm-1 col-md-1 col-lg-1">
                 <b-button class="btn-delete">
-                    <unicon name="trash" fill="red"></unicon>
+                    <unicon name="trash" fill="#b1060f"></unicon>
                 </b-button>
             </b-col>
         </b-row>

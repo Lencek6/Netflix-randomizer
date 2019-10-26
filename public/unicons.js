@@ -7,7 +7,8 @@ import {
         uniAngleUp,
         uniAngleDown,
         uniTrash,
-        uniListUl}
+        uniListUl,
+        uniHome}
 from 'vue-unicons/src/icons'
 
 Unicon.add([
@@ -18,6 +19,7 @@ Unicon.add([
             uniAngleUp,
             uniAngleDown,
             uniTrash,
-            uniListUl])
+            uniListUl,
+            uniHome])
 
 export default Unicon
