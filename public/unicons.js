@@ -7,8 +7,14 @@ import {
         uniAngleUp,
         uniAngleDown,
         uniTrash,
-        uniListUl,
-        uniHome}
+        uniBars,
+        uniHomeAlt,
+        uniPlay,
+        uniUsersAlt,
+        uniUserExclamation,
+        uniClock,
+        uniSchedule,
+        uniClipboardNotes}
 from 'vue-unicons/src/icons'
 
 Unicon.add([
@@ -19,7 +25,13 @@ Unicon.add([
             uniAngleUp,
             uniAngleDown,
             uniTrash,
-            uniListUl,
-            uniHome])
+            uniBars,
+            uniHomeAlt,
+            uniPlay,
+            uniUsersAlt,
+            uniUserExclamation,
+            uniClock,
+            uniSchedule,
+            uniClipboardNotes])
 
 export default Unicon

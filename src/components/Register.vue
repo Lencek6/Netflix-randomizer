@@ -3,7 +3,8 @@
         <b-container class="flex">
             <b-row class="justify-content-center">
                 <b-col class="col-md-6 col-xl-6 col-sm-6 rounded login_style">
-                    <b-form @submit="onSubmit" v-if="show" class="mt-5 mb-5">
+                    <h4 class="mt-5 mb-3">Register</h4>
+                    <b-form @submit="onSubmit" v-if="show" class="mb-5">
                         <b-input-group
                                 class="mb-3"
                                 id="input-group-reg1"
