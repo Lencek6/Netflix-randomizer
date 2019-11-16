@@ -15,7 +15,7 @@
                             </b-input-group-prepend>
                             <b-form-input
                                     id="input-reg1"
-                                    v-model="form.email"
+                                    v-model="email"
                                     type="email"
                                     required
                                     placeholder="Email"
@@ -32,7 +32,7 @@
                             </b-input-group-prepend>
                             <b-form-input
                                     id="input-reg2"
-                                    v-model="form.name"
+                                    v-model="name"
                                     required
                                     placeholder="Name"
                             ></b-form-input>
@@ -48,7 +48,7 @@
                             </b-input-group-prepend>
                             <b-form-input
                                     id="input-reg3"
-                                    v-model="form.pwd"
+                                    v-model="pwd"
                                     type="password"
                                     required
                                     placeholder="Password"
@@ -61,7 +61,7 @@
                             </b-input-group-prepend>
                             <b-form-input
                                     id="input-reg4"
-                                    v-model="form.pwdRep"
+                                    v-model="pwdRep"
                                     required
                                     type="password"
                                     placeholder="Repeat password"
@@ -81,19 +81,88 @@
         name: "Register",
         data() {
             return {
-                form: {
-                    email: '',
-                    name: '',
-                    pwd: '',
-                    pwdRep: ''
-                },
+                email: '',
+                name: '',
+                pwd: '',
+                pwdRep: '',
                 show: true
             }
         },
         methods: {
-            onSubmit(evt) {
-                evt.preventDefault()
-                alert(JSON.stringify(this.form))
+            onSubmit(e) {
+                e.preventDefault()
+                // Check password matching
+                if (this.pwd != this.pwdRep) {
+                    this.$notify({
+                        group: 'onTop',
+                        type: 'error',
+                        title: 'Password error',
+                        text: 'Provided passwords does not match!'
+                    });
+                } else {
+                    let self = this
+                    this.axios
+                        .post('http://localhost:3000/register', {
+                            email: this.email,
+                            name: this.name,
+                            pwd: this.pwd
+                        })
+                        .then(response => {
+                            if (response.data.isCreated === true) {
+                                localStorage.clear();
+                                self.email = '';
+                                self.name = '';
+                                self.pwd = '';
+                                self.pwdRep = '';
+                                self.$notify({
+                                    group: 'onTop',
+                                    type: 'success',
+                                    title: 'Registration successful',
+                                    text: response.data.message
+                                });
+                                self.$router.push('/login')
+                            } else {
+                                self.$notify({
+                                    group: 'onTop',
+                                    type: 'error',
+                                    title: 'Registration error',
+                                    text: response.data.message
+                                });
+                            }
+
+                        })
+                        .catch(error => {
+                            console.log(error)
+                        })
+                }
+            }
+        },
+        watch: {
+            name: function () {
+                localStorage.setItem('register.name', this.name);
+            },
+            email: function () {
+                localStorage.setItem('register.email', this.email);
+            },
+            pwd: function () {
+                localStorage.setItem('register.pwd', this.pwd);
+            },
+            pwdRep: function () {
+                localStorage.setItem('register.pwdRep', this.pwdRep);
+            }
+        },
+        mounted() {
+            if (localStorage.getItem('register.name')) {
+                this.name = localStorage.getItem('register.name');
+            }
+            if (localStorage.getItem('register.email')) {
+                this.email = localStorage.getItem('register.email');
+            }
+            if (localStorage.getItem('register.pwd')) {
+                this.pwd = localStorage.getItem('register.pwd');
+            }
+            if (localStorage.getItem('register.pwdRep')) {
+                this.pwdRep = localStorage.getItem('register.pwdRep');
             }
         }
     }

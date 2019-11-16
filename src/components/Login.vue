@@ -18,7 +18,7 @@
                                     v-model="form.email"
                                     type="email"
                                     required
-                                    placeholder="Enter email"
+                                    placeholder="Email"
                             ></b-form-input>
                         </b-input-group>
 
@@ -31,7 +31,7 @@
                                     v-model="form.pwd"
                                     required
                                     type="password"
-                                    placeholder="Enter password"
+                                    placeholder="Password"
                             ></b-form-input>
                         </b-input-group>
                         <b-button class="mt-3 nf-red" type="submit" variant="danger">Login</b-button>
@@ -55,9 +55,25 @@
             }
         },
         methods: {
-            onSubmit(evt) {
-                evt.preventDefault()
-                alert(JSON.stringify(this.form))
+            onSubmit(e) {
+                e.preventDefault()
+                let self = this
+                this.axios
+                    .post('http://localhost:3000/login',{
+                        email: this.form.email,
+                        pwd: this.form.pwd
+                    })
+                    .then(response => {
+                        console.log(response)
+                    })
+                    .catch(error => {
+                        self.$notify({
+                            group: 'onTop',
+                            type: 'error',
+                            title: 'Login error',
+                            text: 'Invalid email or password!'
+                        });
+                    })
             }
         }
     }

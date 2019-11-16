@@ -12,17 +12,23 @@ const routes = [
   {
     path: "/history",
     component: History,
-    meta: {requiresAuth: false}
+    meta: {requiresAuth: true}
   },
   {
     path: "/login",
     component: Login,
-    meta: { guest: true}
+    meta: {
+      guest: true,
+      hideOnLogin: true,
+    }
   },
   {
     path: "/register",
     component: Register,
-    meta: { guest: true}
+    meta: {
+      guest: true,
+      hideOnLogin: true,
+    }
   },
   {
     path: "/randomizer",

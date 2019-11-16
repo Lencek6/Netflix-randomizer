@@ -1,5 +1,6 @@
 <template>
     <div>
+        <notifications group="onTop" position="top center" width="50%"></notifications>
         <Navigation></Navigation>
         <div>
             <router-view></router-view>
@@ -15,7 +16,7 @@
     export default {
         name: 'app',
         components: {
-          Footer,
+            Footer,
             Navigation
         }
     }
@@ -37,6 +38,5 @@
         justify-content: center;
         height: 90vh;
     }
-
 
 </style>

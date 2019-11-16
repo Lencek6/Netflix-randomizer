@@ -18,7 +18,7 @@
                                     id="inputRandomize-1"
                                     v-model="form.type"
                                     required
-                                    placeholder="Enter type"
+                                    placeholder="Type"
                             ></b-form-input>
                         </b-input-group>
                         <b-input-group class="mb-3" id="inputRandomize-group-2" label-for="inputRandomize-2">
@@ -29,7 +29,7 @@
                                     id="inputRandomize-2"
                                     v-model="form.actor"
                                     required
-                                    placeholder="Enter actor name"
+                                    placeholder="Actor name"
                             ></b-form-input>
                         </b-input-group>
                         <b-input-group id="inputRandomize-group-3" label="" label-for="inputRandomize-3">
@@ -40,7 +40,7 @@
                                     id="inputRandomize-3"
                                     v-model="form.director"
                                     required
-                                    placeholder="Enter director name"
+                                    placeholder="Director name"
                             ></b-form-input>
                         </b-input-group>
                         <b-input-group :append="form.year" class="mt-3">
@@ -60,7 +60,7 @@
                                     id="inputRandomize-4"
                                     v-model="form.genre"
                                     required
-                                    placeholder="Enter genre"
+                                    placeholder="Genre"
                             ></b-form-input>
                         </b-input-group>
                         <b-button class="mt-3 nf-red mr-3" type="submit" variant="danger">Randomize</b-button>

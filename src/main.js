@@ -7,8 +7,9 @@ import router from "../router/index"
 import Unicon from "../public/unicons"
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import Notifications from 'vue-notification'
 
-
+Vue.use(Notifications)
 Vue.use(VueAxios, axios)
 Vue.use(Unicon)
 Vue.use(BootstrapVue)

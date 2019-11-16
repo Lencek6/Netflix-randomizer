@@ -8,6 +8,8 @@ const port = 3000
 
 let moviesRouter = require('./routes/movies');
 let usersRouter = require('./routes/users');
+let loginRouter = require('./routes/login.js');
+let registerRouter = require ('./routes/register')
 
 let server = express();
 
@@ -18,14 +20,19 @@ server.use(express.urlencoded({ extended: false }));
 server.use(cookieParser());
 
 //CORS
-server.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
+let allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', "http://localhost:8081");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
-});
+}
+server.use(allowCrossDomain);
 
 
+server.use('/login', loginRouter);
 server.use('/movies', moviesRouter);
 server.use('/users', usersRouter);
+server.use('/register',registerRouter);
 
 // catch 404 and forward to error handler
 server.use(function(req, res, next) {

@@ -11,13 +11,18 @@
                     <router-link to="/randomizer" style="color: white" v-b-toggle.collapse-navi>RANDOMIZE</router-link>
                 </b-collapse>
             </b-col>
-            <b-col>
+            <b-col v-if="isLoggedIn()">
                 <b-collapse id="collapse-navi">
                     <router-link to="/history" style="color: white" v-b-toggle.collapse-navi>HISTORY</router-link>
                 </b-collapse>
             </b-col>
+            <b-col v-if="isLoggedIn() === false">
+                <b-collapse id="collapse-navi">
+                    <router-link to="/login" style="color: white" v-b-toggle.collapse-navi>LOGIN</router-link>
+                </b-collapse>
+            </b-col>
             <b-col cols="auto">
-                <router-link to="/login">
+                <router-link to="/randomizer">
                     <unicon name="home-alt" fill="#b1060f"></unicon>
                 </router-link>
             </b-col>
@@ -27,7 +32,12 @@
 
 <script>
     export default {
-        name: "Navigation"
+        name: "Navigation",
+        methods:{
+            isLoggedIn(){
+                return !!localStorage.getItem('JWT');
+            }
+        }
     }
 </script>
 
