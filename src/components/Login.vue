@@ -62,7 +62,8 @@
                         pwd: this.pwd
                     })
                     .then(response => {
-                        self.$router.push('/randomizer')
+                        self.$router.go
+                        ('/randomizer')
                         localStorage.clear();
                         localStorage.setItem('JWT',response.data)
                     })

@@ -69,7 +69,7 @@
                         </b-input-group>
                         <b-button class="mt-3 nf-red" type="submit" variant="danger">Register</b-button>
                     </b-form>
-                    <router-link to="/" style="color: white">Home</router-link>
+                    <router-link to="/" style="color: white">Back to login</router-link>
                 </b-col>
             </b-row>
         </b-container>

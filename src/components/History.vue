@@ -14,15 +14,20 @@
     export default {
         data(){
             return{
-                movies: {},
-                user: 'lencek@outlook.com'
+                movies: {}
             }
         },
         components: {MovieCard},
         mounted (){
+            let config = {
+                headers: {
+                    Authorization: localStorage.getItem('JWT')
+                }
+            }
+            let data = {}
             let self = this
             this.axios
-                .get('http://localhost:3000/movies?user='+ self.user)
+                .post('http://localhost:3000/movies',data,config)
                 .then(response => {
                     self.movies = response.data[0].movies
                 })

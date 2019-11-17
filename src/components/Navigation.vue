@@ -8,25 +8,23 @@
             </b-col>
             <b-col>
                 <b-collapse id="collapse-navi">
-                    <router-link to="/randomizer" style="color: #b1060f; font-size: 15px" v-b-toggle.collapse-navi><unicon name="bars" fill="#e50913"></unicon></router-link>
+                    <router-link to="/randomizer" style="color: white; font-size: 15px" v-b-toggle.collapse-navi><b>RANDOMIZER</b></router-link>
                 </b-collapse>
             </b-col>
             <b-col v-if="render">
                 <b-collapse id="collapse-navi">
-                    <router-link to="/history" style="color: #b1060f; font-size: 15px" v-b-toggle.collapse-navi><b>HISTORY</b></router-link>
+                    <router-link to="/history" style="color: white; font-size: 15px" v-b-toggle.collapse-navi><b>HISTORY</b></router-link>
                 </b-collapse>
             </b-col>
             <b-col v-if="!render">
                 <b-collapse id="collapse-navi">
-                    <router-link to="/login" style="color: #b1060f; font-size: 15px" v-b-toggle.collapse-navi><b>LOGIN</b></router-link>
+                    <router-link to="/login" style="color: white; font-size: 15px" v-b-toggle.collapse-navi><b>LOGIN</b></router-link>
                 </b-collapse>
             </b-col>
-            <b-col v-if="render">
-                <b-collapse id="collapse-navi">
+            <b-col cols="auto" v-if="render">
                 <router-link @click.native="logOut" to="/login">
                     <unicon name="exit" fill="#b1060f"></unicon>
                 </router-link>
-                </b-collapse>
             </b-col>
         </b-row>
     </b-container>
