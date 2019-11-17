@@ -4,37 +4,40 @@ import Register from "@/components/Register";
 import History from "@/components/History";
 
 const routes = [
-  {
-    path: "/",
-    component: History,
-    meta: {requiresAuth: true}
-  },
-  {
-    path: "/history",
-    component: History,
-    meta: {requiresAuth: true}
-  },
-  {
-    path: "/login",
-    component: Login,
-    meta: {
-      guest: true,
-      hideOnLogin: true,
+    {
+        path: "/",
+        component: Login,
+        meta: {
+            guest: true,
+            hideOnLogin: true,
+        }
+    },
+    {
+        path: "/history",
+        component: History,
+        meta: {requiresAuth: true}
+    },
+    {
+        path: "/login",
+        component: Login,
+        meta: {
+            guest: true,
+            hideOnLogin: true,
+        }
+    },
+    {
+        path: "/register",
+        component: Register,
+        meta: {
+            guest: true,
+            hideOnLogin: true,
+        }
+    },
+    {
+        path: "/randomizer",
+        component: Randomizer,
+        meta: {guest: true}
     }
-  },
-  {
-    path: "/register",
-    component: Register,
-    meta: {
-      guest: true,
-      hideOnLogin: true,
-    }
-  },
-  {
-    path: "/randomizer",
-    component: Randomizer,
-    meta: { guest: true}
-  }
 ]
 
 export default routes;

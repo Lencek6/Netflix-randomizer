@@ -14,7 +14,8 @@ import {
         uniUserExclamation,
         uniClock,
         uniSchedule,
-        uniClipboardNotes}
+        uniClipboardNotes,
+        uniExit}
 from 'vue-unicons/src/icons'
 
 Unicon.add([
@@ -32,6 +33,7 @@ Unicon.add([
             uniUserExclamation,
             uniClock,
             uniSchedule,
-            uniClipboardNotes])
+            uniClipboardNotes,
+            uniExit])
 
 export default Unicon

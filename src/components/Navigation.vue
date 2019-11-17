@@ -1,30 +1,32 @@
 <template>
-    <b-container class="mt-2">
+    <b-container class="mt-2 mr-0">
         <b-row align-v="center" align-h="around">
             <b-col>
-                <b-button class="btn-navi" v-b-toggle.collapse-navi>
+                <b-button @click="rerender" class="btn-navi" v-b-toggle.collapse-navi>
                     <unicon name="bars" fill="#e50913"></unicon>
                 </b-button>
             </b-col>
             <b-col>
                 <b-collapse id="collapse-navi">
-                    <router-link to="/randomizer" style="color: white" v-b-toggle.collapse-navi>RANDOMIZE</router-link>
+                    <router-link to="/randomizer" style="color: #b1060f; font-size: 15px" v-b-toggle.collapse-navi><unicon name="bars" fill="#e50913"></unicon></router-link>
                 </b-collapse>
             </b-col>
-            <b-col v-if="isLoggedIn()">
+            <b-col v-if="render">
                 <b-collapse id="collapse-navi">
-                    <router-link to="/history" style="color: white" v-b-toggle.collapse-navi>HISTORY</router-link>
+                    <router-link to="/history" style="color: #b1060f; font-size: 15px" v-b-toggle.collapse-navi><b>HISTORY</b></router-link>
                 </b-collapse>
             </b-col>
-            <b-col v-if="isLoggedIn() === false">
+            <b-col v-if="!render">
                 <b-collapse id="collapse-navi">
-                    <router-link to="/login" style="color: white" v-b-toggle.collapse-navi>LOGIN</router-link>
+                    <router-link to="/login" style="color: #b1060f; font-size: 15px" v-b-toggle.collapse-navi><b>LOGIN</b></router-link>
                 </b-collapse>
             </b-col>
-            <b-col cols="auto">
-                <router-link to="/randomizer">
-                    <unicon name="home-alt" fill="#b1060f"></unicon>
+            <b-col v-if="render">
+                <b-collapse id="collapse-navi">
+                <router-link @click.native="logOut" to="/login">
+                    <unicon name="exit" fill="#b1060f"></unicon>
                 </router-link>
+                </b-collapse>
             </b-col>
         </b-row>
     </b-container>
@@ -33,20 +35,36 @@
 <script>
     export default {
         name: "Navigation",
-        methods:{
-            isLoggedIn(){
-                return !!localStorage.getItem('JWT');
+        data() {
+            return {
+                render: '',
+                name: ''
             }
+        },
+        methods: {
+            logOut() {
+                localStorage.removeItem('JWT')
+                this.render = ! this.render
+                this.$router.push('/login')
+            },
+            rerender(){
+                this.render = !! localStorage.getItem('JWT')
+            }
+
+        },
+        mounted() {
+            this.render = !! localStorage.getItem('JWT')
         }
     }
 </script>
 
 <style scoped>
-    .btn-navi,.btn-home {
+    .btn-navi, .btn-home {
         border: none !important;
         outline: 0 !important;
         background-color: transparent !important;
     }
+
     .btn-navi:focus, .btn-navi:active, .btn-home:focus, .btn-home:active {
         outline: none !important;
         box-shadow: none !important;

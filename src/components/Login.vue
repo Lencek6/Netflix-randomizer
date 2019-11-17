@@ -15,7 +15,7 @@
                             </b-input-group-prepend>
                             <b-form-input
                                     id="input-1"
-                                    v-model="form.email"
+                                    v-model="email"
                                     type="email"
                                     required
                                     placeholder="Email"
@@ -28,7 +28,7 @@
                             </b-input-group-prepend>
                             <b-form-input
                                     id="input-2"
-                                    v-model="form.pwd"
+                                    v-model="pwd"
                                     required
                                     type="password"
                                     placeholder="Password"
@@ -47,10 +47,8 @@
     export default {
         data() {
             return {
-                form: {
-                    email: '',
-                    pwd: '',
-                },
+                email: '',
+                pwd: '',
                 show: true
             }
         },
@@ -59,12 +57,14 @@
                 e.preventDefault()
                 let self = this
                 this.axios
-                    .post('http://localhost:3000/login',{
-                        email: this.form.email,
-                        pwd: this.form.pwd
+                    .post('http://localhost:3000/login', {
+                        email: this.email,
+                        pwd: this.pwd
                     })
                     .then(response => {
-                        console.log(response)
+                        self.$router.push('/randomizer')
+                        localStorage.clear();
+                        localStorage.setItem('JWT',response.data)
                     })
                     .catch(error => {
                         self.$notify({
@@ -74,6 +74,22 @@
                             text: 'Invalid email or password!'
                         });
                     })
+            }
+        },
+        watch:{
+            pwd: function () {
+                localStorage.setItem('login.pwd', this.pwd);
+            },
+            email: function () {
+                localStorage.setItem('login.email', this.email);
+            }
+        },
+        mounted(){
+            if (localStorage.getItem('login.email')) {
+                this.email = localStorage.getItem('login.email');
+            }
+            if (localStorage.getItem('login.pwd')) {
+                this.pwd = localStorage.getItem('login.pwd');
             }
         }
     }
