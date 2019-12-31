@@ -11,7 +11,7 @@
                                 label-for="input-1"
                         >
                             <b-input-group-prepend>
-                                <span class="input-group-text"><unicon name="at" fill="black"></unicon></span>
+                                <span class="input-group-text"><unicon name="at" fill="black"/></span>
                             </b-input-group-prepend>
                             <b-form-input
                                     id="input-1"
@@ -19,12 +19,12 @@
                                     type="email"
                                     required
                                     placeholder="Email"
-                            ></b-form-input>
+                            />
                         </b-input-group>
 
                         <b-input-group id="input-group-2" label="" label-for="input-2">
                             <b-input-group-prepend>
-                                <span class="input-group-text"><unicon name="key-skeleton" fill="black"></unicon></span>
+                                <span class="input-group-text"><unicon name="key-skeleton" fill="black"/></span>
                             </b-input-group-prepend>
                             <b-form-input
                                     id="input-2"
@@ -32,7 +32,7 @@
                                     required
                                     type="password"
                                     placeholder="Password"
-                            ></b-form-input>
+                            />
                         </b-input-group>
                         <b-button class="mt-3 nf-red" type="submit" variant="danger">Login</b-button>
                     </b-form>
@@ -65,7 +65,7 @@
                         self.$router.go
                         ('/randomizer')
                         localStorage.clear();
-                        localStorage.setItem('JWT',response.data)
+                        localStorage.setItem('JWT', response.data)
                     })
                     .catch(error => {
                         self.$notify({
@@ -77,7 +77,7 @@
                     })
             }
         },
-        watch:{
+        watch: {
             pwd: function () {
                 localStorage.setItem('login.pwd', this.pwd);
             },
@@ -85,7 +85,7 @@
                 localStorage.setItem('login.email', this.email);
             }
         },
-        mounted(){
+        mounted() {
             if (localStorage.getItem('login.email')) {
                 this.email = localStorage.getItem('login.email');
             }

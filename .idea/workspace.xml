@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b45142b9-4d6e-4d82-afa5-93f9a1f6d41d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/middleware/validateJWT.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/movies.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/movies.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/History.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/History.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/History/RandomizerResults.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Randomizer/RandomizerResults.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Randomizer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Randomizer.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.vue" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,33 +27,31 @@
   </component>
   <component name="ProjectId" id="1SFCwjDbXyabeJC8VmomjVQZhvg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\FIŠ\3. Letnik\Spletni in mobilni informacijski sistemi\app\src\components\Randomizer" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\FIŠ\3. Letnik\Spletni in mobilni informacijski sistemi\app\server" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="npm.npm serve">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:8080">
@@ -72,6 +67,18 @@
       <envs />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -96,7 +103,13 @@
       <workItem from="1572973559845" duration="122000" />
       <workItem from="1572977366724" duration="721000" />
       <workItem from="1573893808945" duration="26451000" />
-      <workItem from="1573983031658" duration="7750000" />
+      <workItem from="1573983031658" duration="8479000" />
+      <workItem from="1575996641821" duration="253000" />
+      <workItem from="1575996917761" duration="516000" />
+      <workItem from="1575997446526" duration="318000" />
+      <workItem from="1577028712172" duration="8000" />
+      <workItem from="1577792873368" duration="450000" />
+      <workItem from="1577793338318" duration="11095000" />
     </task>
     <servers />
   </component>
@@ -115,5 +128,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="277" y="54" key="SettingsEditor" timestamp="1577793361955">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="54" key="SettingsEditor/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1577793361955" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1577794095840">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1577794095840" />
   </component>
 </project>

@@ -11,7 +11,7 @@
                                 label-for="input-reg1"
                         >
                             <b-input-group-prepend>
-                                <span class="input-group-text"><unicon name="at" fill="black"></unicon></span>
+                                <span class="input-group-text"><unicon name="at" fill="black"/></span>
                             </b-input-group-prepend>
                             <b-form-input
                                     id="input-reg1"
@@ -19,7 +19,7 @@
                                     type="email"
                                     required
                                     placeholder="Email"
-                            ></b-form-input>
+                            />
                         </b-input-group>
 
                         <b-input-group
@@ -28,14 +28,14 @@
                                 label-for="input-reg2"
                         >
                             <b-input-group-prepend>
-                                <span class="input-group-text"><unicon name="user" fill="black"></unicon></span>
+                                <span class="input-group-text"><unicon name="user" fill="black"/></span>
                             </b-input-group-prepend>
                             <b-form-input
                                     id="input-reg2"
                                     v-model="name"
                                     required
                                     placeholder="Name"
-                            ></b-form-input>
+                            />
                         </b-input-group>
 
                         <b-input-group
@@ -44,7 +44,7 @@
                                 label-for="input-reg3"
                         >
                             <b-input-group-prepend>
-                                <span class="input-group-text"><unicon name="key-skeleton" fill="black"></unicon></span>
+                                <span class="input-group-text"><unicon name="key-skeleton" fill="black"/></span>
                             </b-input-group-prepend>
                             <b-form-input
                                     id="input-reg3"
@@ -52,12 +52,12 @@
                                     type="password"
                                     required
                                     placeholder="Password"
-                            ></b-form-input>
+                            />
                         </b-input-group>
 
                         <b-input-group id="input-group-reg4" label="" label-for="input-reg4">
                             <b-input-group-prepend>
-                                <span class="input-group-text"><unicon name="key-skeleton" fill="black"></unicon></span>
+                                <span class="input-group-text"><unicon name="key-skeleton" fill="black"/></span>
                             </b-input-group-prepend>
                             <b-form-input
                                     id="input-reg4"
@@ -65,7 +65,7 @@
                                     required
                                     type="password"
                                     placeholder="Repeat password"
-                            ></b-form-input>
+                            />
                         </b-input-group>
                         <b-button class="mt-3 nf-red" type="submit" variant="danger">Register</b-button>
                     </b-form>
