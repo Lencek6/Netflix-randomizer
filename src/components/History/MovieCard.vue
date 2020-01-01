@@ -9,7 +9,7 @@
                         aria-controls="collapse"
                         @click="triggerCollapse()"
                 >
-                    <unicon :name="dropDownIcon" fill="#e50913"></unicon>
+                    <unicon :name="dropDownIcon" fill="#e50913"/>
                 </b-button>
             </b-col>
             <b-col class="col-7 col-sm-10 col-md-10 col-lg-10">
@@ -17,18 +17,19 @@
                 </slot>
             </b-col>
             <b-col class="col-3 col-sm-1 col-md-1 col-lg-1">
-                <b-button class="btn-delete">
-                    <unicon name="trash" fill="#b1060f"></unicon>
+                <b-button class="btn-delete" @click="removeMovie">
+                    <unicon name="trash" fill="#b1060f"/>
                 </b-button>
             </b-col>
         </b-row>
         <b-collapse id="collapse" v-model="showCollapse">
             <b-row class="mt-2 ml-2 mr-2">
                 <b-col>
-                    Watch date: <slot name="date"></slot>
+                    Watch date:
+                    <slot name="date"/>
                 </b-col>
             </b-row>
-                <b-row class="ml-2 mr-2">
+            <b-row class="ml-2 mr-2">
                 <b-col class="col-md-12">
                     <slot name="image">
                     </slot>
@@ -54,12 +55,17 @@
             }
         },
         methods: {
-            triggerCollapse(){
-                this.showCollapse = !this.showCollapse
-                if(this.showCollapse === true)
+            // Show or hide collapse elements
+            triggerCollapse() {
+                this.showCollapse = !this.showCollapse;
+                if (this.showCollapse === true)
                     this.dropDownIcon = 'angle-up'
                 else
                     this.dropDownIcon = 'angle-down'
+            },
+            // Emit removeMovie event to a parent component
+            removeMovie() {
+                this.$emit('removeMovie')
             }
         }
     }
@@ -70,18 +76,21 @@
         background: rgba(0, 0, 0, 0.28);
         color: white;
     }
-    .btn-collapse,.btn-delete{
+
+    .btn-collapse, .btn-delete {
         border: none !important;
         outline: 0;
         background-color: transparent
     }
-    .btn-delete:focus,.btn-delete:active,.btn-collapse:focus,.btn-collapse:active {
+
+    .btn-delete:focus, .btn-delete:active, .btn-collapse:focus, .btn-collapse:active {
         outline: none !important;
         box-shadow: none !important;
         background-color: transparent !important;
         border: none !important
     }
-    img{
-        border:white;
+
+    img {
+        border: white;
     }
 </style>

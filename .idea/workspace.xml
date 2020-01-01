@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b45142b9-4d6e-4d82-afa5-93f9a1f6d41d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/History/RandomizerResults.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Randomizer/RandomizerResults.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/movies.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/movies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/History.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/History.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/History/MovieCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/History/MovieCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Randomizer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Randomizer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Randomizer/RandomizerResults.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Randomizer/RandomizerResults.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +110,7 @@
       <workItem from="1577028712172" duration="8000" />
       <workItem from="1577792873368" duration="450000" />
       <workItem from="1577793338318" duration="11095000" />
+      <workItem from="1577892056180" duration="6286000" />
     </task>
     <servers />
   </component>
@@ -138,5 +139,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1577794095840" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1577896649633">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1280.0.1280.984@0.0.1536.824" timestamp="1577896649633" />
   </component>
 </project>

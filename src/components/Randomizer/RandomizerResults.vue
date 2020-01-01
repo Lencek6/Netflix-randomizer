@@ -24,7 +24,9 @@
             {{results.synopsis}}
         </p>
         <b-button class="nf-red mr-3 mb-5" type="submit" variant="danger" @click="reRoll">Re-roll</b-button>
-        <b-button v-if="JWTcheck" class="nf-red mr-3 mb-5" type="submit" variant="danger">Add to history</b-button>
+        <b-button v-if="JWTcheck" class="nf-red mr-3 mb-5" type="submit" variant="danger" @click="addToHistory">Add to
+            history
+        </b-button>
         <p>
             <router-link class="mb-5" to="" style="color: white" @click.native="resetResults">Back to Randomizer
             </router-link>
@@ -53,6 +55,44 @@
             // Emit reset results event to a parent component
             resetResults() {
                 this.$emit('resetResults')
+            },
+            // Add movie to history list
+            addToHistory() {
+                let config = {
+                    headers: {
+                        Authorization: localStorage.getItem('JWT')
+                    }
+                };
+                // Data send to a back-end
+                let data = {
+                    title: this.results.title,
+                    image: this.results.image,
+                    synopsis: this.results.synopsis,
+                    rating: this.results.rating,
+                    type: this.results.type,
+                    year: this.results.year,
+                    action: 'Add'
+                };
+                let self = this;
+                this.axios
+                    .post('http://localhost:3000/movies/addremove', data, config)
+                    .then(response => {
+                        self.$notify({
+                            group: 'onTop',
+                            type: response.data.type,
+                            title: response.data.title,
+                            text: response.data.message
+                        });
+                    })
+                    .catch(error => {
+                        // Notify user about server problem
+                        self.$notify({
+                            group: 'onTop',
+                            type: 'error',
+                            title: 'Server problem',
+                            text: 'Sorry, we are fixing it. Thank you for your patience'
+                        });
+                    })
             }
         },
         mounted() {

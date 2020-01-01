@@ -156,26 +156,36 @@
                         self.$notify({
                             group: 'onTop',
                             type: 'error',
-                            title: 'Server error',
-                            text: 'Ooops. Something went wrong on the server'
+                            title: 'Server problem',
+                            text: 'Sorry, we are fixing it. Thank you for your patience'
                         });
                     })
             },
             // Method called on event emitted from child component. It reRolls queryResponse
             reRollMovie() {
-                // Make sure random number is different than before
+                // Make sure random number is different than before. And make sure list > 1 to avoid infinite loop
                 let tmpRandomNumber = this.randomNumber;
-                do {
-                    this.randomNumber = Math.floor(Math.random() * this.queryResponseLength)
-                } while (this.randomNumber === tmpRandomNumber);
-                // Write new data for random movie
-                let randomMovie = this.queryResponse[this.randomNumber];
-                this.result.title = randomMovie.title;
-                this.result.year = randomMovie.released;
-                this.result.type = randomMovie.type;
-                this.result.synopsis = randomMovie.synopsis;
-                this.result.image = randomMovie.image;
-                this.result.rating = randomMovie.rating;
+                if (this.queryResponseLength > 1) {
+                    do {
+                        this.randomNumber = Math.floor(Math.random() * this.queryResponseLength)
+                    } while (this.randomNumber === tmpRandomNumber);
+                    // Write new data for random movie
+                    let randomMovie = this.queryResponse[this.randomNumber];
+                    this.result.title = randomMovie.title;
+                    this.result.year = randomMovie.released;
+                    this.result.type = randomMovie.type;
+                    this.result.synopsis = randomMovie.synopsis;
+                    this.result.image = randomMovie.image;
+                    this.result.rating = randomMovie.rating;
+                } else {
+                    // Notify user that there is only one result with selected parameters
+                    self.$notify({
+                        group: 'onTop',
+                        type: 'error',
+                        title: 'Alert',
+                        text: 'There is only one movie with selected parameters'
+                    });
+                }
             },
             // Method called on event emitted from child component. It resets queryResponse and hides children component
             resetQueryResults() {
