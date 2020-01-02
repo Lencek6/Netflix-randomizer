@@ -15,7 +15,14 @@
             <b>Genre:</b>
             {{results.genre}}
         </p>
-        <img :src="results.image" height="182" width="130"/>
+        <vue-load-image>
+            <img slot="image" :src="results.image" height="182" width="130"/>
+            <div slot="preloader" style="height: 182px; width: 130px"
+                 class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border loader-nf-red" role="status">
+                </div>
+            </div>
+        </vue-load-image>
         <p class="mb-0">
             <b>Rating:</b>
             {{results.rating}}
@@ -36,7 +43,12 @@
 </template>
 
 <script>
+    import VueLoadImage from 'vue-load-image'
+
     export default {
+        components: {
+            VueLoadImage
+        },
         name: "RandomizerResults",
         props: {
             results: {}
@@ -104,5 +116,7 @@
 </script>
 
 <style scoped>
-
+    .loader-nf-red {
+        color: rgba(255, 0, 3, 0.83) !important;
+    }
 </style>
