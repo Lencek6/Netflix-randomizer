@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h4 class="v-align mb-3 mt-4" style="height: 5vh; color: white" >History</h4>
+        <h4 class="v-align mb-3 mt-4" style="height: 5vh; color: white" >History ({{movies.length}} movies)</h4>
         <MovieCard v-for="movie in movies" :key="movie.id" @removeMovie="removeMovie(movie.title, movie.released)">
             <span slot="title">{{movie.title}} ({{movie.released}})</span>
             <span slot="date">{{parseDate(movie.createdAt)}}</span>

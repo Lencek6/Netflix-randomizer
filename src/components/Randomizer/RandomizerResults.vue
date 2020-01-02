@@ -16,7 +16,7 @@
             {{results.genre}}
         </p>
         <vue-load-image>
-            <img slot="image" :src="results.image" height="182" width="130"/>
+            <img slot="image" :src="results.image" height="182" width="130" style="border: solid; border-width: 1px;"/>
             <div slot="preloader" style="height: 182px; width: 130px"
                  class="d-flex justify-content-center align-items-center">
                 <div class="spinner-border loader-nf-red" role="status">
