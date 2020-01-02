@@ -1,5 +1,5 @@
 <template>
-    <b-container class="mt-2 mr-0">
+    <b-container class="mt-2">
         <b-row align-v="center" align-h="around">
             <b-col>
                 <b-button @click="rerender" class="btn-navi" v-b-toggle.collapse-navi>
@@ -21,7 +21,7 @@
                     <router-link to="/login" style="color: white; font-size: 15px" v-b-toggle.collapse-navi><b>LOGIN</b></router-link>
                 </b-collapse>
             </b-col>
-            <b-col cols="auto" v-if="render">
+            <b-col cols="auto" v-if="render" class="mr-5">
                 <router-link @click.native="logOut" to="/login">
                     <unicon name="exit" fill="#b1060f"></unicon>
                 </router-link>

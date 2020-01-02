@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b45142b9-4d6e-4d82-afa5-93f9a1f6d41d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/movies.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/movies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/History.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/History.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/History/MovieCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/History/MovieCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Randomizer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Randomizer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Randomizer/RandomizerResults.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Randomizer/RandomizerResults.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +108,8 @@
       <workItem from="1577028712172" duration="8000" />
       <workItem from="1577792873368" duration="450000" />
       <workItem from="1577793338318" duration="11095000" />
-      <workItem from="1577892056180" duration="6286000" />
+      <workItem from="1577892056180" duration="7096000" />
+      <workItem from="1577962096197" duration="6078000" />
     </task>
     <servers />
   </component>

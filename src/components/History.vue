@@ -1,11 +1,15 @@
 <template>
-    <div class="mt-5">
+    <div>
+        <h4 class="v-align mb-3 mt-4" style="height: 5vh; color: white" >History</h4>
         <MovieCard v-for="movie in movies" :key="movie.id" @removeMovie="removeMovie(movie.title, movie.released)">
             <span slot="title">{{movie.title}} ({{movie.released}})</span>
             <span slot="date">{{parseDate(movie.createdAt)}}</span>
             <img slot="image" :src="movie.image" height="182" width="130"/>
             <span slot="desc">{{movie.synopsis}}</span>
         </MovieCard>
+        <div v-if="movies.length===0" class="v-align mb-3 mt-4" style="height: 78vh; color: white">
+            At the moment there are no movies on your history list.
+        </div>
     </div>
 </template>
 
