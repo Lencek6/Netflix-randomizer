@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h4 class="v-align mb-3 mt-4" style="height: 5vh; color: white" >History ({{movies.length}} movies)</h4>
+        <h4 class="v-align mb-3 mt-4" style="height: 5vh; color: white" >{{title}}</h4>
         <MovieCard v-for="movie in movies" :key="movie.id" @removeMovie="removeMovie(movie.title, movie.released)">
             <span slot="title">{{movie.title}} ({{movie.released}})</span>
             <span slot="date">{{parseDate(movie.createdAt)}}</span>
@@ -19,7 +19,8 @@
     export default {
         data() {
             return {
-                movies: {}
+                movies: {},
+                title: ''
             }
         },
         components: {MovieCard},
@@ -35,7 +36,9 @@
             this.axios
                 .post('http://localhost:3000/movies/history', data, config)
                 .then(response => {
-                    self.movies = response.data[0].movies
+                    self.movies = response.data[0].movies;
+                    // Add title when data is loaded
+                    self.title = 'History ('+self.movies.length+' movies)';
                 })
                 .catch(error => {
                     console.log(error)
