@@ -1,6 +1,8 @@
 <template>
     <div>
-        <h4 class="v-align mb-3 mt-4" style="height: 5vh; color: white" >{{title}}</h4>
+        <h4 class="v-align mb-3 mt-4" style="height: 5vh; color: white">
+            <transition name="fade"><p v-if="showTransition">History ({{movies.length}} movies)</p></transition>
+        </h4>
         <MovieCard v-for="movie in movies" :key="movie.id" @removeMovie="removeMovie(movie.title, movie.released)">
             <span slot="title">{{movie.title}} ({{movie.released}})</span>
             <span slot="date">{{parseDate(movie.createdAt)}}</span>
@@ -20,7 +22,7 @@
         data() {
             return {
                 movies: {},
-                title: ''
+                showTransition: false
             }
         },
         components: {MovieCard},
@@ -37,8 +39,8 @@
                 .post('http://localhost:3000/movies/history', data, config)
                 .then(response => {
                     self.movies = response.data[0].movies;
-                    // Add title when data is loaded
-                    self.title = 'History ('+self.movies.length+' movies)';
+                    // Show transition element with movie details after data is loaded from backend
+                    self.showTransition = true
                 })
                 .catch(error => {
                     console.log(error)
@@ -89,6 +91,15 @@
         }
     }
 </script>
-<style>
+<style scoped>
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 1.5s;
+    }
+
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+    {
+        opacity: 0;
+    }
 
 </style>

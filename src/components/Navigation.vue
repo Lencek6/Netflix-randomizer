@@ -1,33 +1,28 @@
 <template>
-    <b-container class="mt-2">
-        <b-row align-v="center" align-h="around">
-            <b-col>
-                <b-button @click="rerender" class="btn-navi" v-b-toggle.collapse-navi>
-                    <unicon name="bars" fill="#e50913"></unicon>
-                </b-button>
-            </b-col>
-            <b-col>
-                <b-collapse id="collapse-navi">
-                    <router-link to="/randomizer" style="color: white; font-size: 15px" v-b-toggle.collapse-navi><b>RANDOMIZER</b></router-link>
-                </b-collapse>
-            </b-col>
-            <b-col v-if="render">
-                <b-collapse id="collapse-navi">
-                    <router-link to="/history" style="color: white; font-size: 15px" v-b-toggle.collapse-navi><b>HISTORY</b></router-link>
-                </b-collapse>
-            </b-col>
-            <b-col v-if="!render">
-                <b-collapse id="collapse-navi">
-                    <router-link to="/login" style="color: white; font-size: 15px" v-b-toggle.collapse-navi><b>LOGIN</b></router-link>
-                </b-collapse>
-            </b-col>
-            <b-col cols="auto" v-if="render" class="mr-5">
-                <router-link @click.native="logOut" to="/login">
-                    <unicon name="exit" fill="#b1060f"></unicon>
-                </router-link>
-            </b-col>
-        </b-row>
-    </b-container>
+    <div class="mt-3 ml-5 d-flex justify-content-between">
+        <div id="flex-1">
+            <router-link to="" @click.native="rerender">
+                <unicon name="bars" fill="#e50913"/>
+            </router-link>
+        </div>
+        <div id="flex-2" v-if="extendBurger">
+            <router-link to="/randomizer" style="color: white; font-size: 15px" @click.native="closeBurger"><b>RANDOMIZER</b>
+            </router-link>
+        </div>
+        <div id="flex-3" v-if="extendBurger">
+            <router-link v-if="render" to="/history" style="color: white; font-size: 15px"
+                         @click.native="closeBurger"><b>HISTORY</b></router-link>
+        </div>
+        <div id="flex-4" v-if="extendBurger">
+            <router-link v-if="!render" to="/login" style="color: white; font-size: 15px"
+                         @click.native="closeBurger"><b>LOGIN</b></router-link>
+        </div>
+        <div id="flex-5" class="mr-5" v-if="extendBurger">
+            <router-link v-if="render" @click.native="logOut" to="/login">
+                <unicon name="exit" fill="#b1060f"/>
+            </router-link>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -36,22 +31,35 @@
         data() {
             return {
                 render: '',
-                name: ''
+                name: '',
+                // By default burger navigation is closed
+                extendBurger: false
             }
         },
         methods: {
+            // Logout user - remove token from localstorage and relocate user to login page
             logOut() {
-                localStorage.removeItem('JWT')
-                this.render = ! this.render
+                localStorage.removeItem('JWT');
+                this.render = !this.render;
+                this.extendBurger = false;
                 this.$router.push('/login')
             },
-            rerender(){
-                this.render = !! localStorage.getItem('JWT')
+            // Open/Close burger navigation. Optionally if any notifications are active, clean them
+            rerender() {
+                this.render = !!localStorage.getItem('JWT');
+                this.extendBurger = !this.extendBurger;
+                this.$notify({
+                    group: 'onTop',
+                    clean: true
+                })
+            },
+            // Close burger navigation - Called when any navigation route is clicked
+            closeBurger() {
+                this.extendBurger = false;
             }
-
         },
         mounted() {
-            this.render = !! localStorage.getItem('JWT')
+            this.render = !!localStorage.getItem('JWT')
         }
     }
 </script>
@@ -68,5 +76,10 @@
         box-shadow: none !important;
         background-color: transparent !important;
         border: none !important
+    }
+
+    .heey {
+        display: flex !important;
+        justify-content: space-around !important;
     }
 </style>

@@ -179,11 +179,11 @@
                     this.result.rating = randomMovie.rating;
                 } else {
                     // Notify user that there is only one result with selected parameters
-                    self.$notify({
+                    this.$notify({
                         group: 'onTop',
                         type: 'error',
                         title: 'Alert',
-                        text: 'There is only one movie with selected parameters'
+                        text: 'There is only one result with selected parameters'
                     });
                 }
             },
